@@ -2,51 +2,327 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Daily Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Crimson Text', serif;
+      background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+      color: #f4e4c1;
+      line-height: 1.8;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, #3d2817 0%, #2a1810 100%);
+      border: 3px solid #8b6f47;
+      border-radius: 15px;
+      box-shadow:
+        0 0 30px rgba(218, 165, 32, 0.3),
+        inset 0 0 50px rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      position: relative;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(45deg, #daa520, #8b6f47, #daa520);
+      border-radius: 15px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #daa520;
+      text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(218, 165, 32, 0.5);
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    h1::after {
+      content: '⚔️';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+    }
+
+    .intro {
+      background: rgba(139, 111, 71, 0.2);
+      border-left: 4px solid #daa520;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    .section {
+      background: rgba(58, 40, 23, 0.6);
+      border: 2px solid #8b6f47;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(218, 165, 32, 0.3);
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
+      color: #daa520;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '📜';
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 12px;
+      margin-bottom: 10px;
+      background: rgba(139, 111, 71, 0.15);
+      border-left: 3px solid #daa520;
+      border-radius: 5px;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    ul li::before {
+      content: '⚡';
+      position: absolute;
+      left: 10px;
+      color: #daa520;
+    }
+
+    strong {
+      color: #f4d03f;
+      font-weight: 600;
+    }
+
+    code {
+      background: rgba(0, 0, 0, 0.5);
+      color: #7dd3fc;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      border: 1px solid #4a5568;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, rgba(139, 111, 71, 0.3), rgba(218, 165, 32, 0.2));
+      border: 2px solid #daa520;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact h2::before {
+      content: '✉️';
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #daa520, transparent);
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .divider::after {
+      content: '⚔️';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #2a1810;
+      padding: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    .lang-switch {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(139, 111, 71, 0.2);
+      border-radius: 10px;
+    }
+
+    a {
+      color: #7dd3fc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    a:hover {
+      color: #daa520;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #daa520;
+      transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.3s; }
+    .section:nth-child(4) { animation-delay: 0.4s; }
+    .section:nth-child(5) { animation-delay: 0.5s; }
+    .section:nth-child(6) { animation-delay: 0.6s; }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>
-    The Chrome extension "Daily Adventure" (hereinafter referred to as "this extension") respects user privacy and operates under the following policy.
-  </p>
+  <div class="container">
+    <h1>Privacy Policy</h1>
 
-  <h2>1. Information Collected</h2>
-  <p>
-    This extension does not collect, store, or transmit personally identifiable information (such as names, email addresses, or browsing history).  
-    Any data used is limited strictly to what is necessary for the functionality of the extension.
-  </p>
+    <div class="intro">
+      <p>
+        The Chrome extension "Daily Adventure" (hereinafter referred to as "this extension") respects user privacy and operates under the following policy.
+      </p>
+    </div>
 
-  <h2>2. Use of Data</h2>
-  <ul>
-    <li><strong>Bedtime Settings:</strong> The bedtime set by the user is saved locally using <code>chrome.storage.local</code> so that it can be reused after restarting the browser.</li>
-    <li><strong>Notifications:</strong> <code>chrome.alarms</code> and <code>chrome.notifications</code> are used to display alerts 30 minutes before the set bedtime.</li>
-    <li><strong>User Interface:</strong> Current time and greeting messages are processed and displayed within the extension only.</li>
-  </ul>
+    <div class="section">
+      <h2>1. Information Collected</h2>
+      <p>
+        This extension does not collect, store, or transmit personally identifiable information (such as names, email addresses, or browsing history).
+        Any data used is limited strictly to what is necessary for the functionality of the extension.
+      </p>
+    </div>
 
-  <h2>3. Sharing of Data with Third Parties</h2>
-  <p>
-    This extension does not provide user data to any third parties.
-  </p>
+    <div class="section">
+      <h2>2. Use of Data</h2>
+      <ul>
+        <li><strong>Bedtime Settings:</strong> The bedtime set by the user is saved locally using <code>chrome.storage.local</code> so that it can be reused after restarting the browser.</li>
+        <li><strong>Notifications:</strong> <code>chrome.alarms</code> and <code>chrome.notifications</code> are used to display alerts 30 minutes before the set bedtime.</li>
+        <li><strong>User Interface:</strong> Current time and greeting messages are processed and displayed within the extension only.</li>
+      </ul>
+    </div>
 
-  <h2>4. Data Retention</h2>
-  <p>
-    Saved data (such as bedtime settings) will be deleted when the user removes it manually or uninstalls the extension.
-  </p>
+    <div class="section">
+      <h2>3. Sharing of Data with Third Parties</h2>
+      <p>
+        This extension does not provide user data to any third parties.
+      </p>
+    </div>
 
-  <h2>5. Policy Updates</h2>
-  <p>
-    If future feature updates require handling of new types of data, this privacy policy will be updated accordingly and changes will be clearly stated.
-  </p>
+    <div class="section">
+      <h2>4. Data Retention</h2>
+      <p>
+        Saved data (such as bedtime settings) will be deleted when the user removes it manually or uninstalls the extension.
+      </p>
+    </div>
 
-  <h2>6. Contact</h2>
-  <p>
-    For inquiries regarding this policy, please contact: <br>
-    📧 daily.adventure.contact@gmail.com
-  </p>
+    <div class="section">
+      <h2>5. Policy Updates</h2>
+      <p>
+        If future feature updates require handling of new types of data, this privacy policy will be updated accordingly and changes will be clearly stated.
+      </p>
+    </div>
 
-  <hr>
-  <p>
-    👉 <a href="index.html">日本語版はこちら</a>
-  </p>
+    <div class="section contact">
+      <h2>6. Contact</h2>
+      <p>
+        For inquiries regarding this policy, please contact: <br>
+        📧 daily.adventure.contact@gmail.com
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="lang-switch">
+      <p>
+        👉 <a href="index.html">日本語版はこちら</a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
